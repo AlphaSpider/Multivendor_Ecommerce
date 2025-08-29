@@ -81,4 +81,35 @@ Documentation
 
 
 23. -------------Video-6-----------
+            JWT Authentication:
 
+24. Install djangorestframework-simplejwt
+25. In project level urls.py add
+    from rest_framework_simplejwt import views as jwt_views and include the 2 url patterns for access and refresh tokens
+    urlpatterns = [
+    ...
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    ...
+]
+    https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation
+
+26. Add Authentication class inside restframework in settings.py
+    REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+27. Generate Tokens:
+    Install httpie or postman... then run this command in the terminal:
+    http post http://127.0.0.1:8000/api/token/ username= password=
+    *   Note down the two tokens access and refresh
+    Requesting--------
+    *   http http://127.0.0.1:8000/api/vendors/ "Authorization: Bearer #your access token"
+    *   http http://127.0.0.1:8000/api/token/refresh/ refresh=         #your refresh token
+
+28. -------------Video-7-----------
