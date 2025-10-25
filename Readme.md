@@ -94,6 +94,13 @@ Documentation
 ]
     https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation
 
+    JWT token gen req http://127.0.0.1:8000/api/token/
+    {
+        "username":"admin",
+        "password":"1234"
+    }
+
+
 26. Add Authentication class inside restframework in settings.py
     REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -113,3 +120,6 @@ Documentation
     *   http http://127.0.0.1:8000/api/token/refresh/ refresh=         #your refresh token
 
 28. -------------Video-7-----------
+
+    Created Customer, Order and Order Items models
+    Order Item for specific order since you can order multiple items in a single order
