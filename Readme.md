@@ -123,3 +123,18 @@ Documentation
 
     Created Customer, Order and Order Items models
     Order Item for specific order since you can order multiple items in a single order
+
+29. ------------Video-8-----------
+    Set up api for Order, Order items
+
+30. ------------Video-9-----------
+    Set up pagination- LimittedOffsetPagination and PageNumberPagination at project level
+
+31. ------------Video-10-----------
+    For custom pagination, create a file pagination.py - create class CustomPagination.
+    In the settings.py change the DEFAULT_PAGINATION_CLASS to the app.pagination.your_classname in this case:   'DEFAULT_PAGINATION_CLASS': 'main.pagination.CustomPagination',
+
+    For custom views, import the pagination from rest_framework in the views.py then define the type of pagination_class you want for that specific view. pagination_class=pagination.LimitOffsetPagination
+    If you want pagenumber pagination then add pagination_class=pagination.PageNumberPagination
+
+32.
