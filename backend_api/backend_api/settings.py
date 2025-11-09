@@ -135,5 +135,5 @@ REST_FRAMEWORK = {
     # ],
 
     'DEFAULT_PAGINATION_CLASS': 'main.pagination.CustomPagination',
-    'PAGE_SIZE': 1
+    'PAGE_SIZE': 10
 }
