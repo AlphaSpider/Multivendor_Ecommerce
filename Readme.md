@@ -6,7 +6,7 @@ Documentation
 4. Install PostgreSQL
 5. Install PgAdmin4
 6. Install psycopg2-binary
-4. install djangorestframewok
+4. install djangorestframework
 5. Import Django inbuilt User model to models.py by "from django.contrib.auth.models import User"
 
 -------------Video-3-----------
@@ -137,4 +137,28 @@ Documentation
     For custom views, import the pagination from rest_framework in the views.py then define the type of pagination_class you want for that specific view. pagination_class=pagination.LimitOffsetPagination
     If you want pagenumber pagination then add pagination_class=pagination.PageNumberPagination
 
-32.
+32. ------------Video-11-----------
+    Viewsets and Routers
+
+    A ViewSet is a type of class-based view that consolidates logic for multiple related views (like list, create, retrieve, update, delete) into a single class. - Instead of writing separate views for each HTTP method, you define one ViewSet
+
+    A Router is a utility that automatically generates URL patterns for your ViewSets.
+    - It binds ViewSet actions to URLs using RESTful conventions.
+    - You don’t need to manually define paths like /products/, /products/1/, etc.
+
+    
+33. ------------Video-11----------- nested serializers (Relational serializers)
+    In the models, created model for rating and review products.
+
+    Set up product rating and reviews
+    Created Serializer class, views and models.
+    Created Productreview serializer
+    Created ProductRatingViewset
+    In the ProductDetailSerializer:
+        declare product_rating (The name you given in the 'ProductRating' model's related name) and set StringRelatedField.
+        Also add the 'product_ratings' in the field too.
+            product_ratings=serializers.StringRelatedField(many=True, read_only=True)
+            fields=['id', 'category', 'vendor', 'title', 'detail', 'price', 'product_ratings']
+        
+    In the ProductRating model, return rating and review using fstring.
+
