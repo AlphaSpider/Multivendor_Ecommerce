@@ -147,7 +147,7 @@ Documentation
     - You don’t need to manually define paths like /products/, /products/1/, etc.
 
     
-33. ------------Video-11----------- nested serializers (Relational serializers)
+33. ------------Video-12----------- nested serializers (Relational serializers)
     In the models, created model for rating and review products.
 
     Set up product rating and reviews
@@ -162,3 +162,5 @@ Documentation
         
     In the ProductRating model, return rating and review using fstring.
 
+33. ------------Video-13----------- Creating React Frontend
+    Start the backend server in one terminal, then open a new terminal and run npm create-react-app frontend follwed by npm start
