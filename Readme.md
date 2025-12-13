@@ -168,3 +168,4 @@ Documentation
 
 34. ------------video14------------
     Started frontend
+    Fixed the JWT issue and now it works when using chocolaty for testing
